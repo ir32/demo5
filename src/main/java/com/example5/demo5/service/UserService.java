@@ -5,6 +5,8 @@ import com.example5.demo5.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService {
 
@@ -20,5 +22,9 @@ public class UserService {
         user.setName(name);
         user.setEmail(email);
         userRepository.save(user);
+    }
+    
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
     }
 }

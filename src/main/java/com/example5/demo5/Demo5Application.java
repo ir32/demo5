@@ -12,7 +12,6 @@ public class Demo5Application {
 		ApplicationContext context = SpringApplication.run(Demo5Application.class, args);
 		
 		UserService userService = context.getBean(UserService.class);
-		userService.insertUser("asdasd", "sasA@gmail1.com");
 	}
 
 }
